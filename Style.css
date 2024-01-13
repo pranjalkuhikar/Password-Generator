@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.container h1 {
+  color: black;
+  opacity: 1;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.display-container {
+  position: relative;
+  border-radius: 1rem;
+  background: #00000088;
+  color: #ffff;
+  margin: 1rem 0;
+  padding-top: 0.35rem;
+}
+
+.display {
+  width: 100%;
+  background-color: transparent;
+  padding: 1.15rem 1rem;
+  color: yellow;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+  padding-right: 3.25rem;
+  border: none;
+  outline: none;
+}
+
+.display::placeholder {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 30px;
+  color: yellow;
+  opacity: 0.65;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+}
+
+.display-container button {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.copyBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  color: var(--vb-yellow);
+  font-size: 1.25rem;
+  top: -35px;
+  left: -25px;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: all 250ms ease-in-out;
+}
+
+.tooltip.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.input-container {
+  background: #00000088;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: white;
+}
+
+.length-container {
+  font-weight: 500;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.length-container p:nth-child(2) {
+  color: yellow;
+}
+
+.strength-container {
+  font-weight: 500;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.indicate {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.generateButtton {
+  width: 100%;
+  padding: 0.9rem 0;
+  text-align: center;
+  border-color: #2c3e50;
+  color: #fff;
+  border-radius: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #2c3e50;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 0 1rem;
+}
+
+.check input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.check input:checked {
+  background-color: #fff;
+}
+
+.check input:checked::before {
+  content: "✔";
+  position: absolute;
+  left: 50%;
+  top: -3.5px;
+  transform: translate(-50%, 5%);
+  background-color: #0000;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: all 100ms ease-in;
+}
+
+.check label {
+  font-size: 1.25rem;
+  letter-spacing: 0.75px;
+}
+
+.slider {
+  appearance: none;
+  width: 100%;
+  height: 0.75rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background: #484b4d;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: yellow;
+  transition: all 100ms ease-in;
+  box-shadow: 0px 0px 20px 0px yellow;
+}
+
+.slider:focus {
+  outline: 3px solid yellow;
+}
